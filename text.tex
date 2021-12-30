@@ -1,17 +1,18 @@
-\section{Vysvětlete pojem konvergované telekomunikace, resp.\ konvergence telekomunikačních sítí.}
+\question{Vysvětlete pojem konvergované telekomunikace, resp.\ konvergence telekomunikačních sítí.}
 
-\textbf{Konvergence -- (Sbíhavost)}
+\textbf{Konvergence (sbíhavost)} znamená sjednocení komunikačních a informačních služeb do~jednoho celku.
+Účastníkovi není trvale vystavěn okruh po dobu hovoru.
+Hovor je přenášen v malých paketech skrze IP síť.
 
-U 5.\ generace ústředen, sloučení telefonních a IP sítí > IP telefonie, VoIP, paketová telefonie. Není zde účastníkovi trvale vystavěn okruh po dobu hovoru. Hovor je přenášen v malých paketech skrze IP síť.
+\question{Vysvětlete pojmy Transwitch, Softswitch+Media gateway. Uveďte některé představitele či platformy, odlišnosti a oblast využití.}
 
-\section{Vysvětlete pojmy Transwitch, Softswitch+Media gateway. Uveďte některé představitele či platformy, odlišnosti a oblast využití.}
+\textbf{Transwitch -- HW ústředna}
 
-\textbf{Transwitch - HW ústředna}
+Uplatnění je univerzální a spolehlivé -- koncový zákazníci a poskytovatelé.
+Pro spojování je využito specifického HW.
+Použití zejména pro TDM a výkonné systémy (Siemens EWSD, Alcatel 1000 S12).
 
-Uplatnění je univerzální a spolehlivé - koncový zákazníci a poskytovatelé.
-Pro spojování je využito specifického HW.\@ Použití zejména pro TDM a výkonné systémy. (Siemens EWSD, Alcatel 1000 S12)
-
-\textbf{Softswitch - SW ústředna} s přidanou funkcionalitou klasické ústředny, zatím pouze menší ústředny. Uplatnění: VoIP, poskytovatele,specifické aplikace-embedded, TMD-VoIP atd.
+\textbf{Softswitch -- SW ústředna} s přidanou funkcionalitou klasické ústředny, zatím pouze menší ústředny. Uplatnění: VoIP, poskytovatele, specifické aplikace-embedded, TMD-VoIP atd.
 
 Můžeme rozdělit dle otevřenosti zdrojového kódu na:
 \begin{itemize}[noitemsep]
@@ -36,13 +37,13 @@ Příkaz začíná slovem se čtyřmi znaky: AUEP, AUCX, CRCX, DLCX, EPCF, MDCX,
 Odpověď začíná třemi čísly tzv.\@ kódu odpovědi, např. 200 (OK), podobně jako SIP.\@ V protokolu MGCP má každý příkaz transakční ID, které obsahuje i odpověď.
 
 
-\newpage
 
-\section{Porovnejte výhody a nevýhody použití Open Source ústředen a proprietárních ústředen, tj. ústředen tradičních výrobců. Uveďte a odůvodněte nejčastější aplikace.}
+
+\question{Porovnejte výhody a nevýhody použití Open Source ústředen a proprietárních ústředen, tj. ústředen tradičních výrobců. Uveďte a odůvodněte nejčastější aplikace.}
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=\textwidth]{images/otazka3.png}
+        \includegraphics[height=15em]{images/otazka3.png}
         \caption{Srovnání - Open source vs. Proprietary}
         \label{img:1}
     \end{center}
@@ -52,12 +53,12 @@ Odpověď začíná třemi čísly tzv.\@ kódu odpovědi, např. 200 (OK), podo
 
 \noindent Zoiper -- zadarmo, telefon
 
-\noindent Skype -- zadarmo, telefon, jednoduchá obsluha i lajkem. (WIN)
+\noindent Skype -- zadarmo, telefon, jednoduchá obsluha i laikem. (WIN)
 
 
-\newpage
 
-\section{Co je to DID a DISA? Vysvětlete na příkladu PBX v síti s pevným číslovacím plánem. Který typ byste očekávali u menších a který u větších PBX?}
+
+\question{Co je to DID a DISA? Vysvětlete na příkladu PBX v síti s pevným číslovacím plánem. Který typ byste očekávali u menších a který u větších PBX?}
 
 \textbf{DID (DDI):}
 
@@ -77,7 +78,7 @@ DISA:\@ oznamovací tón 512 345 678 speciální oznamovací tón 45
 
 DISA-IVR:\@ oznamovací tón 512 345 678 hláška IVR 4 hláška IVR 5
 
-\section{Co je to šetřící automat LCR (ARS)? Vysvětlete funkci. Načrtněte obrázek funkce některé z implementací šetřícího automatu. Co je to normalizace?}
+\question{Co je to šetřící automat LCR (ARS)? Vysvětlete funkci. Načrtněte obrázek funkce některé z implementací šetřícího automatu. Co je to normalizace?}
 
 Ústředny obsahají vždy i pokročilejší techniky směrování, označované jako:
 \begin{itemize}[noitemsep]
@@ -115,20 +116,21 @@ Rozsah možností RS/LCR je dán konkrétní implementací výrobce. V některý
     \end{center}
 \end{figure}
 
-\section{Vysvětlete princip směrování hovorů v PBX Asterisk. K čemu slouží kontexty? Uveďte jednoduchý příklad s pomocí souboru rozhraní a volacího (směrovacího) plánu.}
+\question{Vysvětlete princip směrování hovorů v PBX Asterisk. K čemu slouží kontexty? Uveďte jednoduchý příklad s pomocí souboru rozhraní a volacího (směrovacího) plánu.}
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \begin{center}
         \begin{minipage}[c]{0.35\textwidth}
             Každá pobočka, přenašeč (kanál) je v konfiguračním souboru přidružena kontextu -- context. Směrování je realizováno na základě směrovacích pravidel -- Dialplan, která obsahují souhrn pravidel pro každý kontext. Nejčastěji na základě prefixu volaného čísla je využito pravidlo s nejlepší shodou. Kontexty tak reprezentují skupiny s daným oprávněním.
         \end{minipage}%
-        \begin{minipage}[c]{0.65\textwidth}
-            \centering\includegraphics[width=12cm]{images/otazka6.png}
+        \hspace*{0.05\textwidth}%
+        \begin{minipage}[c]{0.60\textwidth}
+            \centering\includegraphics[width=\textwidth]{images/otazka6.png}
         \end{minipage}
 \end{center}
 \end{figure}
 
-\section{Charakterizujte Open Source PBX. Pro které aplikace je nutno doplnit specifický HW? Uveďte některé výrobce specifického HW pro Open Source PBX.}
+\question{Charakterizujte Open Source PBX. Pro které aplikace je nutno doplnit specifický HW? Uveďte některé výrobce specifického HW pro Open Source PBX.}
 
 \textbf{Open Source PBX ústředny:}
 \begin{itemize}[noitemsep]
@@ -147,7 +149,7 @@ Rozsah možností RS/LCR je dán konkrétní implementací výrobce. V některý
     \item SIP Express Router, a další.
 \end{itemize}
 
-\section{Architektura PBX Asterisk. Uveďte základní čtyři API rozhraní a jejich využití. K čemu slouží Dynamic Module Loader, Codec Translator, Application Launcher?}
+\question{Architektura PBX Asterisk. Uveďte základní čtyři API rozhraní a jejich využití. K čemu slouží Dynamic Module Loader, Codec Translator, Application Launcher?}
 
 PBX Switching Core -- přepojovací jádro transparentně spojující příchozí volání na jednotlivých HW a SW rozhraních.
 
@@ -166,7 +168,7 @@ Dynamic Module Loader -- modul, který po startu sytému zavede a inicializuje m
     \end{center}
 \end{figure}
 
-\section{Uveďte příklady alternativních Open Source PBX k PBX Asterisk a porovnejte je.}
+\question{Uveďte příklady alternativních Open Source PBX k PBX Asterisk a porovnejte je.}
 
 \begin{figure}[h!]
     \begin{center}
@@ -176,12 +178,12 @@ Dynamic Module Loader -- modul, který po startu sytému zavede a inicializuje m
     \end{center}
 \end{figure}
 
-\section{Instalace Open Source PBX. Porovnejte výhody a nevýhody instalace z balíčků a instalaci ze zkompilovaných zdrojových souborů. Kdy se pro druhou z nich rozhodnete?}
+\question{Instalace Open Source PBX. Porovnejte výhody a nevýhody instalace z balíčků a instalaci ze zkompilovaných zdrojových souborů. Kdy se pro druhou z nich rozhodnete?}
 
 Instalace z balíčků je jednodužší. Pokud jsem jen uživatel, tak je to jasná volba.
 Pokud rozumím UNIX, tak jdu do zkompilovaných zdrojových souborů. Pokud budu chtít modifikovat zdrojové soubory, případně integrovat do Asterisku svůj HW nebo SW.
 
-\section{Uveďte možnosti připojení PBX do veřejné sítě. U jednotlivých příkladů rozhraní uveďte i názvy použitých signalizací.}
+\question{Uveďte možnosti připojení PBX do veřejné sítě. U jednotlivých příkladů rozhraní uveďte i názvy použitých signalizací.}
 
 \textbf{Embedding} -- jedná se o implementace Softswitchů na jednoúčelových i nepříliš výkonných zařízeních s minimem paměti (např. 4 MB FLASH, 32 MB RAM). Takto lze realizovat například VoIP brány, VoIP ústředny malé Hybridní ústředny. Další možností je implementace přímo na jednoúčelových HW síťových prvcích běžících pod Linuxem. Více informací naleznete např. v Asterisk a embedding.
 
@@ -208,7 +210,7 @@ umožňující připojení do veřejné sítě a propojení PBX
     \item GSM brány - pro cenově výhodné volání do GSM sítě nebo v rámci firemní VPN.
 \end{itemize}
 
-\section{Vyjmenujte sedm základních funkcí analogové účastnické sady a stručně je vysvětlete. Jak jsou v zahraniční literatuře označeny a-drát a b-drát?}
+\question{Vyjmenujte sedm základních funkcí analogové účastnické sady a stručně je vysvětlete. Jak jsou v zahraniční literatuře označeny a-drát a b-drát?}
 
 Každý účastník je zakončen v ústředně na Hlavním Rozvodu (HR) -- Main Distribution Frame (MDF). HR obsahuje i primární přepěťovou ochranu. Odtud je analogový účastník připojen ke své účastnické sadě (ÚSa) pomocí a-drátu (Ring) -Ub a b-drátu (Tip) zem. Parametry tohoto rozhraní definují doporučení ITU-T řady Q.500, ETSI TBR21. Účastnická sada analogové telefonní stanice má tyto funkce:
 
@@ -229,7 +231,7 @@ Každý účastník je zakončen v ústředně na Hlavním Rozvodu (HR) -- Main 
     \end{center}
 \end{figure}
 
-\section{Funkce účastnické sady: Jakým způsobem je napájen analogový telefon? Specifikujte parametry a typ zdroje.}
+\question{Funkce účastnické sady: Jakým způsobem je napájen analogový telefon? Specifikujte parametry a typ zdroje.}
 
 \textbf{Napájení} -- Telefonní přístroj je napájen konstantním stejnosměrným proudem většinou cca. 30 mA s napěťovým omezením. Integrované obvody pro účastnické sady umožňují nastavit tento proud v rozsahu cca. 20-60 mA.
 
@@ -239,7 +241,7 @@ Z historické zvyklosti je uzemněn kladný potenciál (elektrokoroze). Dnes se 
 
 Napájení konstantním zdrojem proudu umožňuje minimalizovat vliv délky vedení na napájení telefonního přístroje. Mezní parametry vedení jsou 2 x 800 a 0,5 $\mu$F (vedení 0,4mm ~ 270 /km, Rtelefonu = 600 ).
 
-\section{Funkce účastnické sady: Vysvětlete funkce analogové účastnické sady vyzvánění, dohlížení a testování. Dle specifické funkce uveďte parametry úrovní a tvaru signálů, časové parametry.}
+\question{Funkce účastnické sady: Vysvětlete funkce analogové účastnické sady vyzvánění, dohlížení a testování. Dle specifické funkce uveďte parametry úrovní a tvaru signálů, časové parametry.}
 
 \textbf{Vyzváněné (Ringing)}
 
@@ -259,7 +261,7 @@ Testovací obvody obsahují PSTN ústředny, ale PBX zpravidla ne. IO pro účas
 
 Testuje se impedance vedení, svod vedení, ochranné obvody pomocí definovaných impulsů, počet připojených přístrojů, měření při zavěšení i vyvěšení, účastníka je možno odvést do speciální měřicí ÚSa, automatické testování v noci.
 
-\section{Funkce účastnické sady: Vysvětlete funkce analogové účastnické sady kódování a vidlicovou funkci. Pro které generace ústředen jsou tyto funkce vyžadovány?}
+\question{Funkce účastnické sady: Vysvětlete funkce analogové účastnické sady kódování a vidlicovou funkci. Pro které generace ústředen jsou tyto funkce vyžadovány?}
 
 \textbf{Coding} -- Vdigitálních ústřednách je potřeba realizovat digitalizaci analogového signálu. Analogový signál je nutno kmitočtově omezit na 0,3-3,4 kHz (dnešní ústředny i o trošku více), navzorkovat \uv{8 kHz} (dnes předvzorkováno vyšším kmitočtem, což umožňuje jednodušší číslicovou filtraci a další číslicové zpracování), realizovat datovou kompresi (A-law) a vytvořit tak výsledný datový tok 64 kb/s. IO pro tyto účely obsahuje tedy kodér, dekodér a filtry, a proto se označuje COFIDEC.
 
@@ -267,7 +269,7 @@ Testuje se impedance vedení, svod vedení, ochranné obvody pomocí definovaný
 
 \noindent\textbf{Hybrid} -- Vidlice zajišťuje převod 2-drátu na 4-drát, což je nezbytná operace pro následnou digitalizaci signálu. Dnes je řešena jako aktivní pomocí operačních zesilovačů. Softwarově lze nastavit jestli je účastník připojen krátkým, středně dlouhým nebo dlouhým vedením. Většinou však je nastaveno jednotně pro celou ústřednu. Vzniklé echo od nedokonalého vyvážení je minimalizováno při následném číslicovém zpracování signálu.
 
-\section{Vysvětlete signalizaci na analogovém účastnickém rozhraní POTS pro stav \uv{volání}. Uveďte reprezentaci jednotlivých signálů a jejich parametry. Jedná se o celosvětově standardní signalizaci nebo se v jednotlivých zemích liší?}
+\question{Vysvětlete signalizaci na analogovém účastnickém rozhraní POTS pro stav \uv{volání}. Uveďte reprezentaci jednotlivých signálů a jejich parametry. Jedná se o celosvětově standardní signalizaci nebo se v jednotlivých zemích liší?}
 
 Signalizace U na analogovém účastnickém rozhraní:
 \begin{itemize}[noitemsep]
@@ -292,7 +294,7 @@ Signalizace U na analogovém účastnickém rozhraní:
     \item V UK společnost British Telecom používá ještě před prvním vyzváněním reverzaci polarity, a poté ještě před prvním zazvoněním je přenesena identifikace volajícího CLIP.
 \end{itemize}
 
-\section{Jaké hardwarové karty pro Open Source PBX jsou dnes nabízeny?}
+\question{Jaké hardwarové karty pro Open Source PBX jsou dnes nabízeny?}
 
 Hardware pro Softswitche: Výrobci HW jsou Digium, Sangoma, BeroNet a další. Firma Digium je hlavním sponzorem projektu Asterisk.
 
@@ -302,7 +304,7 @@ FXS (Foreign eXchange Subscriber) zásuvka na zdi, přináší telefonní služb
 
 FXO ( Foreign eXchange Office) zásuvka na telefonu, zajišťuje směr zákazník -- telefonní společnost. (zdroj signálu pro přihlášení a odhlášení)
 
-\section{Jaké jsou základní prvky signalizační sítě SS7? Vysvětlete jejich funkci.}
+\question{Jaké jsou základní prvky signalizační sítě SS7? Vysvětlete jejich funkci.}
 
 Základní prvky signalizační sítě SS7 jsou signalizační body SP (Signal Point):
 
@@ -317,7 +319,7 @@ STP (Signal Transfer Point) -- nezpracovává signalizaci, pouze ji předává. 
     \end{center}
 \end{figure}
 
-\section{Jakým způsobem je řešena adresace v síti SS7. Vysvětlete význam pojmu národní síť, národní rezerva (přechodová síť), mezinárodní síť, mezinárodní rezerva? Zakreslete obrázek využití jednotlivých sítí v ČR.}
+\question{Jakým způsobem je řešena adresace v síti SS7. Vysvětlete význam pojmu národní síť, národní rezerva (přechodová síť), mezinárodní síť, mezinárodní rezerva? Zakreslete obrázek využití jednotlivých sítí v ČR.}
 
 Struktura sítě SS7 je tvořena body SP (Signaling Point). Každý signalizační bod má svojí adresu, která se nazývá SPC (Signaling Point Code) a má délku 14 bitů. Zóna (první 3 bity) odpovídá přibližně světadílu, dále je specifikována zem (identifikace sítě 8 bitů) v rámci zóny a pak následuje vlastní identifikace (adresa) SP (3 bity). Adresa SP je rozdělena do tří úrovní: mezinárodní, národní (mezi-operátorová) a operátorová. Důvod tohoto dělení spočívá ve zjednodušení přidělování SPC.
 
@@ -332,7 +334,7 @@ Ten specifikuje zdali se jedná o SPC v národní síti NAT0-národní síť a N
     \end{center}
 \end{figure}
 
-\section{SS7: Uveďte základní tři typy zpráv (SU) přenášených na 2. vrstvě. K čemu slouží?}
+\question{SS7: Uveďte základní tři typy zpráv (SU) přenášených na 2. vrstvě. K čemu slouží?}
 
 FISU -- (Fill-in Signal Units) jsou tzv. výplňové zprávy. Jsou vysílány neustále a zajišťují pravidelnou bitovou strukturu. Dále slouží k potvrzování zpráv MSU.
 
@@ -340,13 +342,13 @@ LSSU - (Link Status Signal Units) používající se k indikaci stavu signaliza�
 
 MSU - (Message Signal Units) zprávy, které přenáší užitečnou informaci. Obsahuje: SIO (Service Information Octet) -- typ sítě (národní/mezinárodní), prioritu a typ zprávy. SIF (Signaling Information Field) -- zdroj, cíl, cestu zprávy a signalizační informace.
 
-\section{SS7: Jakým způsobem je identifikováno v signalizací SS7-ISUP, která může probíhat i v zcela jiném rámci E1 než vlastní hovor, ke kterému time-slotu a E1 tato signalizace přísluší.}
+\question{SS7: Jakým způsobem je identifikováno v signalizací SS7-ISUP, která může probíhat i v zcela jiném rámci E1 než vlastní hovor, ke kterému time-slotu a E1 tato signalizace přísluší.}
 
 CIC (Circuit Identification Code) udává okruh pro který se buduje hovor.
 
 Pokud je signalizační linka i hovorový okruh v téže E1, je vyšší část CIC nulová a v nižší je přímo číslo kanálu. Druhou variantou je sloučení více skupin E1, pak vyšší část CIC určuje skupinu, tedy o kterou E1 jde. Nižší opět určuje kanál. DODATEK - Jedná se o informaci 3.vrstvy pro vrstvu ISUP.
 
-\section{SS7: Uveďte sled zprávy, které se přenáší na vrstvě ISUP při budování hovorového spojení.}
+\question{SS7: Uveďte sled zprávy, které se přenáší na vrstvě ISUP při budování hovorového spojení.}
 
 - vrstva ISUP = ISDN user part
 
@@ -365,7 +367,7 @@ Pokud je signalizační linka i hovorový okruh v téže E1, je vyšší část 
     \item RLC (Release Complete) -- potvrzení zrušení
 \end{itemize}
 
-\section{SS7: Uveďte, ve kterých Open Source PBX a jak lze implementovat SS7. Rovněž u každého příkladu uveďte, které prvky signalizační sítě SS7 jsou implementovány.}
+\question{SS7: Uveďte, ve kterých Open Source PBX a jak lze implementovat SS7. Rovněž u každého příkladu uveďte, které prvky signalizační sítě SS7 jsou implementovány.}
 
 Implementace signalizačního systému číslo 7 pro Asterisk na bázi TDM:
 \begin{itemize}[noitemsep]
@@ -379,7 +381,7 @@ Další informace na \href{http://www.netfors.com/chan_ss7_free}{http://www.netf
     \item SS7box / SS7boost - placené řešení firmy Sangoma. Skládá se z prvků Sangoma Media Gateway, SS7box, SS7boost. Na Asterisk je navázána pomocí chan\_woomera (viz Sangoma BRI). Umožňuje i přenos SS7 signalizace přes IP síť protokolem SCTP viz dále.
 \end{itemize}
 
-\section{Uveďte standardizované signalizační VoIP protokoly a oblast využití.}
+\question{Uveďte standardizované signalizační VoIP protokoly a oblast využití.}
 
 Nejznámějšími signalizačními protokoly v internetové telefonii VoIP jsou:
 \begin{itemize}[noitemsep]
@@ -400,7 +402,7 @@ Proprietární signalizační protokoly, zejména v PBX:
     \item Skype
 \end{itemize}
 
-\section{K čemu slouží protokoly pro správu multimediální relace, co je v nich přenášeno, co je pomocí nich \uv{vyjednáváno}. Uveďte protokoly pro správu multimediální relace využívané v SIP, MGCP, H.323 a IAX.}
+\question{K čemu slouží protokoly pro správu multimediální relace, co je v nich přenášeno, co je pomocí nich \uv{vyjednáváno}. Uveďte protokoly pro správu multimediální relace využívané v SIP, MGCP, H.323 a IAX.}
 
 Signalizační protokoly pro vazbu na signalizační systém SS7 a jeho přenos po IP síti:
 \begin{itemize}[noitemsep]
@@ -423,7 +425,7 @@ Standardy kodeků:
     \item ITU.T řady G: G.711, G.729, G.723.1, G.726, \ldots ( řada H - video) - ostatní: GSM, iLBC, AMR, Speex, \ldots
 \end{itemize}
 
-\section{Protokol SIP: Popište průběh spojení. Co zajišťuje SDP protokol a kde se přenáší. Jaký je jeho ekvivalent v H.323 protokolu.}
+\question{Protokol SIP: Popište průběh spojení. Co zajišťuje SDP protokol a kde se přenáší. Jaký je jeho ekvivalent v H.323 protokolu.}
 
 Protokol SIP (Session Initiation Protocol): signalizační textový protokol,komunikace bod-bod
 
@@ -464,98 +466,98 @@ SIP -- H.225
 
 SDP -- H.245
 
-\section{Protokol SIP: Vysvětlete odlišnosti v implementaci SIP proxy a B2BUA (Back to Back User Agent). Zakreslete obrázky. Která z uvedených metod je uplatněna v PBX Asterisk a jaké jsou její výhody?}
+\question{Protokol SIP: Vysvětlete odlišnosti v implementaci SIP proxy a B2BUA (Back to Back User Agent). Zakreslete obrázky. Která z uvedených metod je uplatněna v PBX Asterisk a jaké jsou její výhody?}
 
 B2BUA plní funkci proxy serveru a zároveň představuje koncový bod pro signalizaci. Na rozdíl od proxy může vytvářet spojení a zasahovat do zasílaných zpráv a při komunikaci mezi koncovými účastníky. SIP proxy architektura je rychlejší, než B2BUA, protože se zabývá pouze signalizacemi. B2BUA může být velmi pomalá díky tomu, že je využita jako SIP proxy pro překlad kodeků z jednoho na druhý (např. G.729 <-> G.711, překlad SIP na H.323). V Asterisku je uplatněna B2BUA.
 
-\section{Vysvětlete rozdíl účtů user, peer a friend v PBX Asterisk. Zakreslete model autentizace hovoru v PBX Asterisk.}
+\question{Vysvětlete rozdíl účtů user, peer a friend v PBX Asterisk. Zakreslete model autentizace hovoru v PBX Asterisk.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Protokol IAX: Popište protokol IAX. Uveďte dva typy rámců, a kdy se který z nich využívá. Popište odlišnosti oproti protokolům SIP a H.323. Uveďte sled zpráv přenášených při budování spojení.}
+\question{Protokol IAX: Popište protokol IAX. Uveďte dva typy rámců, a kdy se který z nich využívá. Popište odlišnosti oproti protokolům SIP a H.323. Uveďte sled zpráv přenášených při budování spojení.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Popište signalizační protokol MGCP. Uveďte oblast jeho využití. Uveďte zprávy (příkazy) používané při vytváření spojení.}
+\question{Popište signalizační protokol MGCP. Uveďte oblast jeho využití. Uveďte zprávy (příkazy) používané při vytváření spojení.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Uveďte alespoň některé proprietární signalizační VoIP protokoly a oblast využití.}
+\question{Uveďte alespoň některé proprietární signalizační VoIP protokoly a oblast využití.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{K čemu slouží skupina protokolů SIGTRAN? Nakreslete vazbu TDM a IP sítě s využitím protokolu SIGRAN.}
+\question{K čemu slouží skupina protokolů SIGTRAN? Nakreslete vazbu TDM a IP sítě s využitím protokolu SIGRAN.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Jaké jsou možnosti přenosu DTMF tónů ve VoIP telefonii. Uveďte příklady aplikací, kdy je nutno přenášet DTMF?}
+\question{Jaké jsou možnosti přenosu DTMF tónů ve VoIP telefonii. Uveďte příklady aplikací, kdy je nutno přenášet DTMF?}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Co je to NAT? Vysvětlete problematiku NAT a problematiku SIP klienta v podsíti. Vysvětlete funkci protokolu STUN. Pro který typ NATu jej nelze použít a proč? Jaké znáte další možnosti \uv{překonání} NAT? Jak je řešen tento problém v PBX Asterisk?}
+\question{Co je to NAT? Vysvětlete problematiku NAT a problematiku SIP klienta v podsíti. Vysvětlete funkci protokolu STUN. Pro který typ NATu jej nelze použít a proč? Jaké znáte další možnosti \uv{překonání} NAT? Jak je řešen tento problém v PBX Asterisk?}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{QoS ve VoIP: Jaké jsou základní tři metody hodnocení kvality hovoru? Co je to MOS a jakých hodnot může nabývat? Co je to R-faktor? Uveďte i některé konkrétní metody.}
+\question{QoS ve VoIP: Jaké jsou základní tři metody hodnocení kvality hovoru? Co je to MOS a jakých hodnot může nabývat? Co je to R-faktor? Uveďte i některé konkrétní metody.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Uveďte některé zvukové kodeky. Je použití některých kodeků licencováno? Uveďte některé z nich. Které kodeky jsou standardně implementovány v HW koncových zařízeních a PBX tradičních výrobců.}
+\question{Uveďte některé zvukové kodeky. Je použití některých kodeků licencováno? Uveďte některé z nich. Které kodeky jsou standardně implementovány v HW koncových zařízeních a PBX tradičních výrobců.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{QoS ve VoIP: Jak souvisí zpoždění paketů s ozvěnou (echem)? Jaké zpoždění signálu bylo v TDM sítích a jaké je cca. v paketových sítích?}
+\question{QoS ve VoIP: Jak souvisí zpoždění paketů s ozvěnou (echem)? Jaké zpoždění signálu bylo v TDM sítích a jaké je cca. v paketových sítích?}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{QoS ve VoIP: Jakými způsoby je možno zajistit QoS ve VoIP telefonii? Je podpora některé z metod zajištění QoS ve VoIP zařízeních téměř standardně implementována? Vysvětlete pojmy DSCP, třída EF (Expedited Forwarding), VoIP VLAN (IEEE 802.1p).}
+\question{QoS ve VoIP: Jakými způsoby je možno zajistit QoS ve VoIP telefonii? Je podpora některé z metod zajištění QoS ve VoIP zařízeních téměř standardně implementována? Vysvětlete pojmy DSCP, třída EF (Expedited Forwarding), VoIP VLAN (IEEE 802.1p).}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Bezpečnost IP telefonie: Jaké znáte typy útoků na telefonní provoz v IP síti. Uveďte alespoň některá opatření k zajištění bezpečnosti VoIP telefonie.}
+\question{Bezpečnost IP telefonie: Jaké znáte typy útoků na telefonní provoz v IP síti. Uveďte alespoň některá opatření k zajištění bezpečnosti VoIP telefonie.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Bezpečnost IP telefonie: Jaké znáte možnosti a protokoly realizace šifrovaného přenosu VoIP telefonie (signalizace i \uv{hlasu})? Uveďte důvody, proč se zatím v širší míře neuplatňují.}
+\question{Bezpečnost IP telefonie: Jaké znáte možnosti a protokoly realizace šifrovaného přenosu VoIP telefonie (signalizace i \uv{hlasu})? Uveďte důvody, proč se zatím v širší míře neuplatňují.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Vysvětlete pojmy zjevný, skrytý, otevřený a uzavřený číslovací plán.}
+\question{Vysvětlete pojmy zjevný, skrytý, otevřený a uzavřený číslovací plán.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Vysvětlete pojem omezení oprávnění v PBX. Jak je implementováno v tradičních PBX a jak je lze implementovat v PBX Asterisk.}
+\question{Vysvětlete pojem omezení oprávnění v PBX. Jak je implementováno v tradičních PBX a jak je lze implementovat v PBX Asterisk.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Vysvětlete pojmy výlučné a obecné přidržení hovoru. Jak je tato funkce implementována v PBX Asterisk? Vysvětlete pojmem převzetí hovoru.}
+\question{Vysvětlete pojmy výlučné a obecné přidržení hovoru. Jak je tato funkce implementována v PBX Asterisk? Vysvětlete pojmem převzetí hovoru.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Popište princip automatické distribuce hovorů. Nakreslete obrázek a uveďte jak je tato služba implementována v PBX Asterisk}
+\question{Popište princip automatické distribuce hovorů. Nakreslete obrázek a uveďte jak je tato služba implementována v PBX Asterisk}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Co je to Interaktivní hlasová odezva (IVR)? Vysvětlete princip implementace v PBX Asterisk.}
+\question{Co je to Interaktivní hlasová odezva (IVR)? Vysvětlete princip implementace v PBX Asterisk.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Uveďte a popište druhy obsluhových systémů z hlediska možnosti vytváření front.}
+\question{Uveďte a popište druhy obsluhových systémů z hlediska možnosti vytváření front.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Co znamená jednotka 1 erl, čeho je to jednotka?}
+\question{Co znamená jednotka 1 erl, čeho je to jednotka?}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Pro jaký obsluhový systém platí první erlangova rovnice a co vyjadřuje.}
+\question{Pro jaký obsluhový systém platí první erlangova rovnice a co vyjadřuje.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Vysvětlete, jak lze využít první erlangovu rovnici pro dimenzování šířky pásma pro VoIP telefonii či dimenzování počtu licencí transkodérů.}
+\question{Vysvětlete, jak lze využít první erlangovu rovnici pro dimenzování šířky pásma pro VoIP telefonii či dimenzování počtu licencí transkodérů.}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
 
-\section{Pro jaký obsluhový systém platí druhá erlangova rovnice a co vyjadřuje?}
+\question{Pro jaký obsluhový systém platí druhá erlangova rovnice a co vyjadřuje?}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula vestibulum felis, hendrerit aliquet sapien sodales nec. Phasellus semper quis orci at ultricies. Mauris non magna vitae massa faucibus vestibulum vel id lorem. Vestibulum interdum lobortis nisl, ut rhoncus dui facilisis sed. Donec eget accumsan lectus. Etiam metus leo, tempus vitae velit non, sagittis tempus dui. Vestibulum nec consectetur velit.
