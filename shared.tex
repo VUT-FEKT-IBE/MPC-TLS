@@ -1,6 +1,6 @@
 % FEKT.tex
 % https://github.com/VUT-FEKT-IBE/FEKT.tex
-% Git hash repozitáře v době kopírování: f8874a4c53186f36b57b00f1e8f6de10c3000930
+% Git hash repozitáře v době kopírování: 67fb27697810846e93123e0ca293a5107707a854
 
 \documentclass[
     % Velikost základního písma je 12 bodů
@@ -26,10 +26,12 @@
 
 % Geometrie stránky
 \usepackage[
-    % Vnitřní a vnější okraj
-    hmargin={20mm,30mm},
     % Horní a dolní okraj
-    vmargin={25mm,25mm},
+    tmargin=25mm,
+    bmargin=25mm,
+    % Vnitřní a vnější okraj
+    lmargin=30mm,
+    rmargin=20mm,
     % Velikost zápatí
     footskip=17mm,
     % Vypnutí záhlaví
@@ -129,6 +131,11 @@
 \usepackage{tabularx}
 \usepackage{multicol}
 
+
+\usepackage{wrapfig}
+%
+\usepackage{float}
+
 % Sázení osamocených float prostředí v horní části stránky
 \makeatletter
 \setlength{\@fptop}{0pt plus 10pt minus 0pt}
@@ -203,7 +210,7 @@
         \vspace*{1em}
 
         \docgroup
-        \\
+
         \url{\docurl}
     \end{center}
 
@@ -216,5 +223,6 @@
     \hfill
     \today
 
-    \clearpage
+    \thispagestyle{empty}
+    \newpage
 }
